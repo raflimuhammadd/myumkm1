@@ -8,7 +8,7 @@ WORKDIR $APP_HOME
 
 COPY . ./
 
-RUN rm model/chatbot.h5
+RUN mkdir model
 
 ADD https://storage.googleapis.com/myumkm_model_bucket/chatbot.h5 model/.
 
