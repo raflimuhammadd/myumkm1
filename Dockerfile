@@ -10,7 +10,11 @@ COPY . ./
 
 RUN mkdir model
 
-ADD https://storage.googleapis.com/myumkm_model_bucket/chatbot.h5 model/.
+RUN mkdir content
+
+ADD https://storage.googleapis.com/myumkm_bucket/chatbot.h5 model/.
+
+ADD https://storage.googleapis.com/myumkm_bucket/umkm.json content/.
 
 RUN pip install -r requirements.txt
 
